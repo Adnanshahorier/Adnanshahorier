@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My University Flex Page</title>
+
+<style>
+    /* -------- BACKGROUND -------- */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(-45deg, #0a0f1f, #111827, #1e293b, #0f172a);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease infinite;
+        color: white;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* -------- MAIN CENTER -------- */
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    /* -------- GLASS CARD -------- */
+    .card {
+        backdrop-filter: blur(18px);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 18px;
+        padding: 35px 40px;
+        max-width: 700px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.06);
+        animation: fadeIn 1.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        background: linear-gradient(90deg, #ff0080, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    /* -------- FLOATING TAGS -------- */
+    .tags {
+        margin-top: 25px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tag {
+        padding: 10px 18px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        font-size: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        animation: floatTag 4s infinite ease-in-out;
+    }
+
+    @keyframes floatTag {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* -------- BUTTON -------- */
+    .btn {
+        margin-top: 35px;
+        padding: 12px 28px;
+        background: linear-gradient(90deg, #ff0080, #00d4ff);
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Hi, I'm Labib</h1>
+        <h2>Future Computer Science Student • Hungary Scholarship 🇭🇺</h2>
+
+        <div class="tags">
+            <div class="tag">CSE Lover</div>
+            <div class="tag">Tech Enthusiast</div>
+            <div class="tag">Scholarship Achiever</div>
+            <div class="tag">Dreaming Big</div>
+            <div class="tag">Next-Gen Innovator</div>
+        </div>
+
+        <a class="btn" href="#">My Portfolio Coming Soon</a>
+    </div>
+</div>
+
+</body>
+</html>
